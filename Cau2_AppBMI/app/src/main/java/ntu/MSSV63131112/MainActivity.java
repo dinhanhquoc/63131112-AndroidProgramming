@@ -45,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setUpView();
         ActionOfButton();
+        boNguon = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,list);
+        lv_history.setAdapter(boNguon);
+
     }
     public void setUpView(){
         edt_hovaten = findViewById(R.id.edt_hovaten);
@@ -99,15 +102,34 @@ public class MainActivity extends AppCompatActivity {
         btn_tinhtoan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                name = edt_hovaten.getText().toString();
-                gioitinh = getValueOfRadionButton();
-                cc =Double.parseDouble( edt_cc.getText().toString());
-                cn =Double.parseDouble( edt_cn.getText().toString());
-                my_bmi = CaculateBMI(cc,cn);
-                CompareBMI(my_bmi);
+                notifyOutput();
             }
         });
 
+    }
+    private void notifyOutput(){
+        name = edt_hovaten.getText().toString();
+        gioitinh = getValueOfRadionButton();
+        cc =Double.parseDouble( edt_cc.getText().toString());
+        cn =Double.parseDouble( edt_cn.getText().toString());
+        my_bmi = CaculateBMI(cc,cn);
+        CompareBMI(my_bmi);
+
+        String space = "  ";
+        StringBuilder builder = new StringBuilder();
+        builder.append(name).
+                append(space).
+                append(gioitinh).
+                append(space).
+                append(cc).append("m").
+                append(space).append(cn).
+                append("kg").append(space).
+                append(my_bmi);
+        AddItemIntoList(builder.toString());
+    }
+    private void AddItemIntoList(String item){
+        list.add(item);
+        boNguon.notifyDataSetChanged();
     }
 
 }
