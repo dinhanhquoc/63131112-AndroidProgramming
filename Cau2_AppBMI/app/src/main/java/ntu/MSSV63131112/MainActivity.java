@@ -1,6 +1,7 @@
 package ntu.MSSV63131112;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         setUpView();
+        ActionOfButton();
     }
     public void setUpView(){
         edt_hovaten = findViewById(R.id.edt_hovaten);
@@ -54,13 +56,7 @@ public class MainActivity extends AppCompatActivity {
         rbtn_khac = findViewById(R.id.rbtn_khac);
         list = new ArrayList<>();
     }
-    public void ActionOfButton(){
-        name = edt_hovaten.getText().toString();
-        gioitinh = getValueOfRadionButton();
-        cc =Double.parseDouble( edt_cc.getText().toString());
-        cn =Double.parseDouble( edt_cn.getText().toString());
-        my_bmi = CaculateBMI(cc,cn);
-    }
+
     private String getValueOfRadionButton(){
         if(rbtn_nam.isChecked()) return "Nam";
         if(rbtn_nu.isChecked()) return "Nữ";
@@ -93,4 +89,19 @@ public class MainActivity extends AppCompatActivity {
         String yeucau ="Bạn bị béo phì cần giảm "+cnyeucau+" Kg";
         tv_mota.setText(yeucau);
     }
+    public void ActionOfButton(){
+        btn_tinhtoan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                name = edt_hovaten.getText().toString();
+                gioitinh = getValueOfRadionButton();
+                cc =Double.parseDouble( edt_cc.getText().toString());
+                cn =Double.parseDouble( edt_cn.getText().toString());
+                my_bmi = CaculateBMI(cc,cn);
+                CompareBMI(my_bmi);
+            }
+        });
+
+    }
+
 }
