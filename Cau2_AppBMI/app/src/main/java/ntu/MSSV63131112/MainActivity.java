@@ -54,6 +54,14 @@ public class MainActivity extends AppCompatActivity {
         list = new ArrayList<>();
     }
     public void ActionOfButton(){
-        
+        name = edt_hovaten.getText().toString();
+        gioitinh = getValueOfRadionButton();
+
+    }
+    public String getValueOfRadionButton(){
+        if(rbtn_nam.isChecked()) return "Nam";
+        if(rbtn_nu.isChecked()) return "Nữ";
+        if(rbtn_khac.isChecked()) return "Khác";
+        return "Nam";
     }
 }
