@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     String gioitinh;
     double cc;
     double cn;
+    double my_bmi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,12 +57,40 @@ public class MainActivity extends AppCompatActivity {
     public void ActionOfButton(){
         name = edt_hovaten.getText().toString();
         gioitinh = getValueOfRadionButton();
-
+        cc =Double.parseDouble( edt_cc.getText().toString());
+        cn =Double.parseDouble( edt_cn.getText().toString());
+        my_bmi = CaculateBMI(cc,cn);
     }
-    public String getValueOfRadionButton(){
+    private String getValueOfRadionButton(){
         if(rbtn_nam.isChecked()) return "Nam";
         if(rbtn_nu.isChecked()) return "Nữ";
         if(rbtn_khac.isChecked()) return "Khác";
         return "Nam";
+    }
+    private double CaculateBMI(double cc,double cn){
+        return cn/Math.pow(cc,2);
+    }
+    private void CompareBMI(double bmi){
+
+        if(bmi < 18.5){
+            double cnyeucau =  18.5 * Math.pow(cc, 2) - cn;
+            String yeucau ="Bạn gầy hơn so với quy định cần tăng "+cnyeucau+" Kg";
+            tv_mota.setText(yeucau);
+            return;
+        }
+        if(bmi>=18.5 && bmi<25){
+            String yeucau ="Bạn có thân hình cân đối";
+            tv_mota.setText(yeucau);
+            return;
+        }
+        if(bmi>=25&& bmi<30){
+            double cnyeucau = cn - 24.9 * Math.pow(cc, 2);
+            String yeucau ="Bạn bị thừa cân cần giảm "+cnyeucau+" Kg";
+            tv_mota.setText(yeucau);
+            return;
+        }
+        double cnyeucau = cn - 24.9 * Math.pow(cc, 2);
+        String yeucau ="Bạn bị béo phì cần giảm "+cnyeucau+" Kg";
+        tv_mota.setText(yeucau);
     }
 }
