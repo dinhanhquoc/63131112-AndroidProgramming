@@ -36,7 +36,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-
+        setUpView();
     }
-
+    public void setUpView(){
+        edt_hovaten = findViewById(R.id.edt_hovaten);
+        edt_cc = findViewById(R.id.edt_cc);
+        edt_cn = findViewById(R.id.edt_cn);
+        tv_mota = findViewById(R.id.tv_mota);
+        lv_history = findViewById(R.id.lv_history);
+        rbtn_nam = findViewById(R.id.rbtn_nam);
+        rbtn_nu = findViewById(R.id.rbtn_nu);
+        rbtn_khac = findViewById(R.id.rbtn_khac);
+        list = new ArrayList<>();
+    }
 }
