@@ -30,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
     RadioButton rbtn_nu;
     RadioButton rbtn_khac;
 
+    String name;
+    String gioitinh;
+    double cc;
+    double cn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,5 +52,8 @@ public class MainActivity extends AppCompatActivity {
         rbtn_nu = findViewById(R.id.rbtn_nu);
         rbtn_khac = findViewById(R.id.rbtn_khac);
         list = new ArrayList<>();
+    }
+    public void ActionOfButton(){
+        
     }
 }
