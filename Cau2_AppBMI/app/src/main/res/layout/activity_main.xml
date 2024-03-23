@@ -33,7 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/edt_hovaten"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
@@ -54,7 +54,7 @@
         android:text="Giới tính"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_hovaten" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -62,8 +62,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText"
-        app:layout_constraintStart_toStartOf="@+id/editTextText"
+        app:layout_constraintEnd_toEndOf="@+id/edt_hovaten"
+        app:layout_constraintStart_toStartOf="@+id/edt_hovaten"
         app:layout_constraintTop_toTopOf="@+id/textView5">
 
         <RadioButton
@@ -95,14 +95,14 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:text="Chiều cao(m)"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/edt_cc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -110,8 +110,8 @@
         android:inputType="text"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView6"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText"
-        app:layout_constraintStart_toStartOf="@+id/editTextText"
+        app:layout_constraintEnd_toEndOf="@+id/edt_hovaten"
+        app:layout_constraintStart_toStartOf="@+id/edt_hovaten"
         app:layout_constraintTop_toTopOf="@+id/textView6" />
 
     <TextView
@@ -122,10 +122,10 @@
         android:text="Cân nặng(kq)"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_cc" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/edt_cn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -133,37 +133,38 @@
         android:inputType="text"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText2"
-        app:layout_constraintStart_toStartOf="@+id/editTextText2"
+        app:layout_constraintEnd_toEndOf="@+id/edt_cc"
+        app:layout_constraintStart_toStartOf="@+id/edt_cc"
         app:layout_constraintTop_toTopOf="@+id/textView8" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_tinhtoan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Tính toán"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_cn" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/tv_mota"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="Mô tả trạng thái"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_tinhtoan" />
 
     <ListView
+        android:id="@+id/lv_history"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_mota" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
