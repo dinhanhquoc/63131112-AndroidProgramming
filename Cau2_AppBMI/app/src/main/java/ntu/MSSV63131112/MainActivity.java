@@ -102,7 +102,14 @@ public class MainActivity extends AppCompatActivity {
         btn_tinhtoan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                notifyOutput();
+                String hoten = edt_hovaten.getText().toString();
+                String chieucao = edt_cc.getText().toString();
+                String cannang = edt_cn.getText().toString();
+                if(!hoten.isEmpty() && !chieucao.isEmpty() && !cannang.isEmpty())
+                    notifyOutput();
+                else{
+                    tv_mota.setText("Hãy nhập thông tin cần thiết");
+                }
             }
         });
 
@@ -114,8 +121,9 @@ public class MainActivity extends AppCompatActivity {
         cn =Double.parseDouble( edt_cn.getText().toString());
         my_bmi = CaculateBMI(cc,cn);
         CompareBMI(my_bmi);
-
-        String space = "  ";
+        DecimalFormat df= new DecimalFormat("#.#");
+        my_bmi = Double.parseDouble(df.format(my_bmi));
+        String space = "   ";
         StringBuilder builder = new StringBuilder();
         builder.append(name).
                 append(space).
@@ -124,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
                 append(cc).append("m").
                 append(space).append(cn).
                 append("kg").append(space).
-                append(my_bmi);
+                append("BMI ").append(my_bmi);
         AddItemIntoList(builder.toString());
     }
     private void AddItemIntoList(String item){
