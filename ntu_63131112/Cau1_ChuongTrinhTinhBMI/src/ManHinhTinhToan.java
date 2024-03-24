@@ -43,7 +43,10 @@ public class ManHinhTinhToan extends JFrame {
 		return bmi;
 	}
 	public void SetKetQua(double bmi) {
-		
+		DecimalFormat df = new DecimalFormat("#.##");
+	    double chieucao = Double.parseDouble(edt_cc.getText().toString());
+	    double cannang = Double.parseDouble(edt_cn.getText().toString());
+	    StringBuilder builder = new StringBuilder();
 	}
 	public ManHinhTinhToan() {
 		setTitle("Chương trình tính BMI");
