@@ -59,6 +59,10 @@ public class ManHinhTinhToan extends JFrame {
 	        chenhlech = (bmi - 24.9) * (chieucao * chieucao);
 	        builder.append("\nBạn cần giảm cân khoảng ").append(df.format(chenhlech)).append(" Kg để đạt chỉ số BMI trong phạm vi bình thường");
 	    }
+	    String formattedBmi = df.format(bmi);
+
+	    txt_bmi.setText(formattedBmi);
+	    edt_mota.setText(builder.toString());
 	}
 	public ManHinhTinhToan() {
 		setTitle("Chương trình tính BMI");
