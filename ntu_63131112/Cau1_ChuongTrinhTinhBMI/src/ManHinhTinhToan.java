@@ -52,6 +52,13 @@ public class ManHinhTinhToan extends JFrame {
         .append("Cân nặng: ").append(cannang).append(" Kg").append("\n");
 
 	    double chenhlech = 0.0;
+	    if (bmi < 18.5) {
+	        chenhlech = (18.5 - bmi) * (chieucao * chieucao);
+	        builder.append("\nBạn cần tăng cân khoảng ").append(df.format(chenhlech)).append(" Kg để đạt chỉ số BMI bình thường");
+	    } else if (bmi >= 25) {
+	        chenhlech = (bmi - 24.9) * (chieucao * chieucao);
+	        builder.append("\nBạn cần giảm cân khoảng ").append(df.format(chenhlech)).append(" Kg để đạt chỉ số BMI trong phạm vi bình thường");
+	    }
 	}
 	public ManHinhTinhToan() {
 		setTitle("Chương trình tính BMI");
