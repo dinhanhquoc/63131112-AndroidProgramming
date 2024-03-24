@@ -47,6 +47,11 @@ public class ManHinhTinhToan extends JFrame {
 	    double chieucao = Double.parseDouble(edt_cc.getText().toString());
 	    double cannang = Double.parseDouble(edt_cn.getText().toString());
 	    StringBuilder builder = new StringBuilder();
+	    builder.append("Họ và tên: ").append(edt_hovaten.getText()).append("\n")
+        .append("Chiều cao: ").append(chieucao).append("m").append("\n")
+        .append("Cân nặng: ").append(cannang).append(" Kg").append("\n");
+
+	    double chenhlech = 0.0;
 	}
 	public ManHinhTinhToan() {
 		setTitle("Chương trình tính BMI");
