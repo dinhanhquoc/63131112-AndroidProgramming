@@ -34,7 +34,9 @@ public class ManHinhTinhToan extends JFrame {
 	 * Create the frame.
 	 */
 	public double TinhToanBMI() {
-		
+		String name = edt_hovaten.getText();
+		String cc = edt_cc.getText();
+		String cn = edt_cn.getText();
 	}
 	public ManHinhTinhToan() {
 		setTitle("Chương trình tính BMI");
