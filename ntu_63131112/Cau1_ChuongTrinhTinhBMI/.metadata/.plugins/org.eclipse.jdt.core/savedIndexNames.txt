@@ -1,0 +1,3 @@
+INDEX VERSION 1.134+C:\Users\HP\Documents\GitHub\63131112-AndroidProgramming\ntu_63131112\Cau1_ChuongTrinhTinhBMI\.metadata\.plugins\org.eclipse.jdt.core
+942305103.index
+4008053420.index
