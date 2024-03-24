@@ -42,6 +42,9 @@ public class ManHinhTinhToan extends JFrame {
 		double bmi = db_cn/Math.pow(db_cc,2);
 		return bmi;
 	}
+	public void SetKetQua(double bmi) {
+		
+	}
 	public ManHinhTinhToan() {
 		setTitle("Chương trình tính BMI");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
