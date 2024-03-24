@@ -37,6 +37,10 @@ public class ManHinhTinhToan extends JFrame {
 		String name = edt_hovaten.getText();
 		String cc = edt_cc.getText();
 		String cn = edt_cn.getText();
+		double db_cc = Double.parseDouble(cc);
+		double db_cn = Double.parseDouble(cn);
+		double bmi = db_cn/Math.pow(db_cc,2);
+		return bmi;
 	}
 	public ManHinhTinhToan() {
 		setTitle("Chương trình tính BMI");
