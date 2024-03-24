@@ -33,7 +33,9 @@ public class ManHinhTinhToan extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	
+	public double TinhToanBMI() {
+		
+	}
 	public ManHinhTinhToan() {
 		setTitle("Chương trình tính BMI");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
