@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Đối tượng dùng để tham khởi tạo màn hình mới
-                
+
                 Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
                 // Khởi chạy activity mới
                 startActivity(intent);
