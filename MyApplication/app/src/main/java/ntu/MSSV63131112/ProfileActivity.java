@@ -21,6 +21,7 @@ public class ProfileActivity extends AppCompatActivity {
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Đóng màn hình hiện tại
                 finishAffinity();
             }
         });
