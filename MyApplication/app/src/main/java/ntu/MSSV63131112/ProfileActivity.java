@@ -37,10 +37,9 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-               
-                    main.setBackgroundColor(Color.parseColor("#290D42")); // Set màu trắng khi switch được bật
+                    main.setBackgroundColor(Color.parseColor("#1C1160")); // Set màu trắng khi switch được bật
                 } else {
-                    main.setBackgroundColor(Color.parseColor(" #1A072B")); // Set màu đen khi switch được tắt
+                    main.setBackgroundColor(Color.parseColor("#1A072B")); // Set màu đen khi switch được tắt
                 }
             }
         });
